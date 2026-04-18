@@ -1,0 +1,7 @@
+curl -i -X POST http://localhost:8080/upload/initiate
+HTTP/1.1 200 OK
+Content-Type: application/json
+Date: Sat, 18 Apr 2026 08:09:44 GMT
+Content-Length: 122
+
+{"data":{"upload_id":"0f033e91-5317-4476-bc89-4a64bc3354d0","upload_url":"/upload/0f033e91-5317-4476-bc89-4a64bc3354d0"}}

@@ -1,0 +1,8 @@
+curl -i -X PUT http://localhost:8080/upload/0f033e91-5317-4476-bc89-4a64bc3354d0 \
+-F file=@./move-crew-details.csv
+HTTP/1.1 200 OK
+Content-Type: application/json
+Date: Sat, 18 Apr 2026 08:10:08 GMT
+Content-Length: 28
+
+{"message":"file uploaded"}

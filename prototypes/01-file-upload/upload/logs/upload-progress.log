@@ -1,0 +1,127 @@
+curl -i -N http://localhost:8080/upload/progress/0f033e91-5317-4476-bc89-4a64bc3354d0
+HTTP/1.1 200 OK
+Cache-Control: no-cache
+Connection: keep-alive
+Content-Type: text/event-stream
+Date: Sat, 18 Apr 2026 08:10:00 GMT
+Transfer-Encoding: chunked
+
+event: upload-progress
+data: {"progress": "60", "complete": false}
+
+event: upload-progress
+data: {"progress": "80", "complete": false}
+
+event: upload-progress
+data: {"progress": "100", "complete": false}
+
+event: upload-progress
+data: {"progress": "120", "complete": false}
+
+event: upload-progress
+data: {"progress": "140", "complete": false}
+
+event: upload-progress
+data: {"progress": "160", "complete": false}
+
+event: upload-progress
+data: {"progress": "180", "complete": false}
+
+event: upload-progress
+data: {"progress": "200", "complete": false}
+
+event: upload-progress
+data: {"progress": "220", "complete": false}
+
+event: upload-progress
+data: {"progress": "240", "complete": false}
+
+event: upload-progress
+data: {"progress": "260", "complete": false}
+
+event: upload-progress
+data: {"progress": "280", "complete": false}
+
+event: upload-progress
+data: {"progress": "300", "complete": false}
+
+event: upload-progress
+data: {"progress": "320", "complete": false}
+
+event: upload-progress
+data: {"progress": "340", "complete": false}
+
+event: upload-progress
+data: {"progress": "360", "complete": false}
+
+event: upload-progress
+data: {"progress": "380", "complete": false}
+
+event: upload-progress
+data: {"progress": "400", "complete": false}
+
+event: upload-progress
+data: {"progress": "420", "complete": false}
+
+event: upload-progress
+data: {"progress": "440", "complete": false}
+
+event: upload-progress
+data: {"progress": "460", "complete": false}
+
+event: upload-progress
+data: {"progress": "480", "complete": false}
+
+event: upload-progress
+data: {"progress": "500", "complete": false}
+
+event: upload-progress
+data: {"progress": "520", "complete": false}
+
+event: upload-progress
+data: {"progress": "540", "complete": false}
+
+event: upload-progress
+data: {"progress": "560", "complete": false}
+
+event: upload-progress
+data: {"progress": "580", "complete": false}
+
+event: upload-progress
+data: {"progress": "600", "complete": false}
+
+event: upload-progress
+data: {"progress": "620", "complete": false}
+
+event: upload-progress
+data: {"progress": "640", "complete": false}
+
+event: upload-progress
+data: {"progress": "660", "complete": false}
+
+event: upload-progress
+data: {"progress": "680", "complete": false}
+
+event: upload-progress
+data: {"progress": "700", "complete": false}
+
+event: upload-progress
+data: {"progress": "720", "complete": false}
+
+event: upload-progress
+data: {"progress": "740", "complete": false}
+
+event: upload-progress
+data: {"progress": "760", "complete": false}
+
+event: upload-progress
+data: {"progress": "780", "complete": false}
+
+event: upload-progress
+data: {"progress": "800", "complete": false}
+
+event: upload-progress
+data: {"progress": "820", "complete": false}
+
+event: upload-progress
+data: {"progress": "838", "complete": true}
