@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"http-protocol-deep-dive/internal/apis"
 	"http-protocol-deep-dive/internal/ratelimit/slowreader"
-	"http-protocol-deep-dive/prototypes/01-file-upload/upload/uploadprogress"
+	"http-protocol-deep-dive/prototypes/01-file-upload/upload/progressstore"
 	"http-protocol-deep-dive/prototypes/01-file-upload/upload/uploadwriter"
 	"io"
 	"mime"
@@ -17,7 +17,7 @@ import (
 // PUT /upload/{uploadid}
 func (u *UploadAPI) UploadFile(ctx context.Context, w http.ResponseWriter, r *http.Request) error {
 	uploadid := r.PathValue("uploadid")
-	_, err := u.ups.GetProgressById(uploadid)
+	_, err := u.ups.GetProgressByID(ctx, uploadid)
 	if err != nil {
 		return apis.NewError(http.StatusBadRequest, "upload id not found")
 	}
@@ -88,10 +88,10 @@ func (u *UploadAPI) UploadFile(ctx context.Context, w http.ResponseWriter, r *ht
 				}
 				defer tmp.Close()
 
-				u.ups.SetProgress(uploadid, uploadprogress.Progress{})
-				wr := uploadwriter.New(tmp, uploadid, u.ups)
+				u.ups.SetProgress(ctx, uploadid, progressstore.Progress{})
+				wr := uploadwriter.New(ctx, tmp, uploadid, u.ups)
 				n, err := io.Copy(wr, slowreader.New(part))
-				u.ups.SetProgress(uploadid, uploadprogress.Progress{
+				u.ups.SetProgress(ctx, uploadid, progressstore.Progress{
 					Err:        err,
 					Total:      uint64(n),
 					SoFar:      uint64(n),

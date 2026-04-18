@@ -861,6 +861,116 @@ cmd/prototypes/
 
 ---
 
+## Phase 10: Redis Store and Docker
+
+### Why Redis?
+
+The in-memory store works for a single instance but breaks in multi-instance deployments — two different server pods can't share a `sync.Mutex`-protected map. Redis is the natural evolution: a shared, external store that all instances can read and write.
+
+### Interface Extraction
+
+The progress store was refactored into an `uploadprog` package with a clean interface:
+
+```go
+type Store interface {
+    DeleteProgressById(ctx context.Context, id string) error
+    GetProgressById(ctx context.Context, id string) (Progress, error)
+    SetProgress(ctx context.Context, id string, p Progress) error
+}
+```
+
+Note: `context.Context` is now on every method — Redis operations are I/O and must be cancellable. The in-memory store also updated to match (context ignored internally, but the contract is consistent).
+
+`IStore` → `Store`: dropped the Java-style `I` prefix. Idiomatic Go names interfaces by what they do, not by marking them as interfaces.
+
+### Redis Hash Layout
+
+Each upload is one Redis hash key:
+
+```
+HSET upload:progress:{id}  so_far 280  total 838  is_complete false  err ""
+```
+
+One key per upload, fields updated independently. `HSET` updates individual fields without touching others — no read-modify-write cycle on every chunk write.
+
+### Serialization Split
+
+`Progress.GetRedisHSetValue()` owns the field names and serialization — it lives on the domain type because it knows the fields best. But the `HGetAll` call and the Redis client live only in `redistore.go`. `ProgressFromRedisMap` takes a plain `map[string]string` — no Redis import in `progress.go`.
+
+```go
+// progress.go — no go-redis import
+func ProgressFromRedisMap(m map[string]string) (Progress, error) { ... }
+
+// redistore.go — owns Redis client
+res, err := r.rclient.HGetAll(ctx, key).Result()
+return ProgressFromRedisMap(res)
+```
+
+### The `error` Field Across the Wire
+
+`Progress.Err` is a Go `error` interface — can't be stored directly. Convention: store the message string, reconstruct with `errors.New` on read. Empty string → nil error. This loses the error type but preserves the human-readable message, which is all the SSE handler needs.
+
+### Context in `uploadwriter`
+
+`io.Writer`'s `Write(p []byte)` contract is fixed — no context parameter. But `SetProgress` now requires one. The solution: store the request context on the `Writer` struct at construction time.
+
+```go
+type Writer struct {
+    ctx context.Context  // request-scoped, valid for io.Copy duration
+    w   io.Writer
+    ...
+}
+```
+
+The context's lifetime exactly matches the writer's — both live for the duration of the upload handler. No callback, no goroutine, just a stored value.
+
+### Config System
+
+Config is a YAML file selected at startup via `-config` CLI flag:
+
+```
+cmd/protos/config/local.yaml         → Redis at 0.0.0.0:6379 (local dev)
+cmd/protos/config/local-docker.yaml  → Redis at redis:6379 (Docker compose service name)
+```
+
+The `redis` hostname works because Docker compose puts both containers on the same network and resolves service names as DNS.
+
+### Docker Setup
+
+```yaml
+services:
+  protos:
+    build:
+      context: ..
+      dockerfile: infra/protos.dockerfile
+    command: ["/usr/local/bin/app", "--config", "/usr/src/app/cmd/protos/config/local-docker.yaml"]
+    depends_on: [redis]
+  redis:
+    image: redis:7.4-alpine
+    volumes:
+      - redis_data:/data
+
+volumes:
+  redis_data:
+```
+
+Key Dockerfile decisions:
+- `GOPROXY=direct` — bypasses `proxy.golang.org` which was connection-refused on this network
+- `go mod download` before `COPY . .` — separate layer, only re-runs when `go.mod`/`go.sum` change
+- `CMD ["/usr/local/bin/app", "--config", "..."]` — runtime config, not build-time `ARG`
+
+### Verified with Docker + Redis
+
+```
+PUT  /upload/{id}           → 8.27s  (token bucket working inside container)
+GET  /upload/progress/{id}  → 12.07s (SSE open longer — Redis round-trip latency per poll)
+Second GET after completion  → 404   (DeleteProgressById cleaned up the key correctly)
+```
+
+SSE events in 20-byte increments confirmed. Redis key deleted after upload completes — subsequent SSE connect correctly returns 404.
+
+---
+
 ## Next: Prototype 02
 
 HTTP Client Connection Pool Analyzer — visualize connection reuse, test pool configurations, ASCII timeline charts, and tuning recommendations.

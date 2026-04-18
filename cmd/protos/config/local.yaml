@@ -1,0 +1,7 @@
+protos:
+  hostname: 0.0.0.0
+  hostport: 8080
+
+redis:
+  hostname: 0.0.0.0
+  hostport: 6379

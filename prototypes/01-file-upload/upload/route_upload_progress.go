@@ -23,7 +23,7 @@ func (u *UploadAPI) UploadProgress(ctx context.Context, w http.ResponseWriter, r
 			// if client closes connection
 			return nil
 		default:
-			progress, err := u.ups.GetProgressById(id)
+			progress, err := u.ups.GetProgressByID(ctx, id)
 			if err != nil {
 				u.log.Error(ctx, "error getting progress from upload-progress-store", "err", err)
 				return apis.NewError(http.StatusNotFound, "upload-id not found")
@@ -31,8 +31,7 @@ func (u *UploadAPI) UploadProgress(ctx context.Context, w http.ResponseWriter, r
 
 			if progress.IsComplete {
 				fmt.Fprintf(w, "event: upload-progress\ndata: {\"progress\": \"%v\", \"complete\": %v}\n\n", progress.SoFar, progress.IsComplete)
-				w.(http.Flusher).Flush()
-				u.ups.DeleteProgressById(id)
+				u.ups.DeleteProgressByID(ctx, id)
 				return nil
 			}
 
@@ -42,7 +41,6 @@ func (u *UploadAPI) UploadProgress(ctx context.Context, w http.ResponseWriter, r
 			}
 			if progress.Err != nil && !progress.IsComplete {
 				fmt.Fprintf(w, "event: upload-progress\ndata: {\"error\": \"%v\"}\n\n", "failed to upload. Try again")
-				w.(http.Flusher).Flush()
 				return nil
 			}
 
