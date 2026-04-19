@@ -971,6 +971,96 @@ SSE events in 20-byte increments confirmed. Redis key deleted after upload compl
 
 ---
 
+## Phase 11: Observability Stack (Grafana + Loki + Promtail)
+
+### Why This Was Added
+
+Logs were flowing to stdout, visible via `docker logs`. But that's not searchable, filterable, or persistent across restarts. The goal: ship logs to a real observability stack and query them by trace ID, duration, level — the payoff of structured JSON logging.
+
+### The Stack
+
+```
+App (stdout → fd=1)
+  → Docker captures to /var/lib/docker/containers/<id>/<id>-json.log
+  → Promtail tails that file, attaches labels, pushes to Loki
+  → Loki stores compressed chunks, indexes labels
+  → Grafana queries Loki, renders logs with parsed JSON fields
+```
+
+### Why Loki and Not Elasticsearch
+
+Loki only indexes labels (metadata), not the full log content. The actual log lines are stored compressed. This makes it much cheaper to run — lower RAM, lower disk. Trade-off: full-text search is slower. For structured JSON logs queried by known fields, Loki is the right fit.
+
+### Why Promtail Needs Two Mounts
+
+```
+/var/run/docker.sock              → WHO to watch (discovery + filtering)
+/var/lib/docker/containers  (ro)  → WHAT to read (actual log bytes)
+```
+
+Docker SD connects to the socket, asks Docker which containers are running and where their log files are. The second mount gives Promtail read access to those files on the host filesystem.
+
+### The `logging=promtail` Filter
+
+Promtail's `docker_sd_configs` filter:
+```yaml
+filters:
+  - name: label
+    values: ["logging=promtail"]
+```
+
+Without this, Promtail tails every container — Loki, Grafana, Redis, everything. The filter limits it to only containers that have `logging: promtail` set in their compose `labels:` block.
+
+### Grafana Datasource Provisioning
+
+Rather than clicking through the UI every time, Grafana reads datasource config from `/etc/grafana/provisioning/datasources/` on startup:
+
+```yaml
+apiVersion: 1
+datasources:
+  - name: Loki
+    type: loki
+    url: http://loki:3100
+    access: proxy
+```
+
+`access: proxy` — Grafana server proxies queries to Loki. The browser never talks to Loki directly, which is correct since Loki is on Docker's internal network.
+
+### The Startup Race Bug
+
+First run: Promtail started before Loki was fully initialized. Promtail pushed log batches, Loki returned `500: Ingester is shutting down` (misleading — it was actually still starting up). Promtail retried but some early logs were lost.
+
+Fix: `depends_on: loki` on Promtail in compose. Also Promtail only picks up logs from when it starts — logs written before Promtail connected are missed on first run.
+
+### What Grafana Showed
+
+Once running, every structured JSON field became queryable:
+
+```
+{container="infra-protos-1"} | json | trace_id = "70d7c4bb-..."
+```
+
+Fields auto-parsed from JSON:
+- `duration` — filterable (`duration > 5s` finds slow requests)
+- `trace_id` — filter entire request lifecycle across all log lines
+- `level` — ERROR logs highlighted in red automatically
+- `file`, `msg`, `status` — all indexed
+
+The structured logging built from day one paid off exactly here. Config values even appeared as fields (`config_Protos_Hostname`, `config_Redis_Hostname`) from the startup log.
+
+### File Structure
+
+```
+infra/
+  observability/
+    docker-compose.yaml      → Loki + Grafana + Promtail services
+    loki-config.yaml         → filesystem storage, single-node, no auth
+    grafana-config.yaml      → Loki datasource provisioning
+    promtail-config.yaml     → Docker SD, label extraction, push to Loki
+```
+
+---
+
 ## Next: Prototype 02
 
 HTTP Client Connection Pool Analyzer — visualize connection reuse, test pool configurations, ASCII timeline charts, and tuning recommendations.

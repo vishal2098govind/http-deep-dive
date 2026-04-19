@@ -1,0 +1,24 @@
+server:
+  http_listen_port: 9080
+
+clients:
+  - url: http://loki:3100/loki/api/v1/push
+
+scrape_configs:
+  - job_name: docker_logs
+    docker_sd_configs:
+      - host: unix:///var/run/docker.sock # Path to the Docker socket
+        refresh_interval: 5s # How often to check for new containers
+        # Optional: Filter to only scrape containers with specific labels
+        filters:
+          - name: label
+            values: [ "logging=promtail" ]
+
+    relabel_configs:
+      # Extract the container name as a label
+      - source_labels: [ "__meta_docker_container_name" ]
+        regex: "/(.*)"
+        target_label: "container"
+      # Map the log stream (stdout/stderr) to a label
+      - source_labels: [ "__meta_docker_container_log_stream" ]
+        target_label: "stream"

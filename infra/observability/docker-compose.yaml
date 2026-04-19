@@ -1,0 +1,30 @@
+services:
+  loki:
+    image: grafana/loki
+    volumes:
+      - ./loki-config.yaml:/etc/loki/config.yaml
+      - ../loki_data:/tmp/loki
+    command: "-config.file=/etc/loki/config.yaml"
+    ports:
+      - 3100:3100
+
+  grafana:
+    depends_on:
+      - "loki"
+    image: grafana/grafana
+    ports:
+      - 3000:3000
+    volumes:
+      - ./grafana-config.yaml:/etc/grafana/provisioning/datasources/datasources.yaml
+
+  promtail:
+    depends_on:
+      - loki
+    image: grafana/promtail
+    volumes:
+      - ./promtail-config.yaml:/etc/promtail/config.yaml
+      - /var/run/docker.sock:/var/run/docker.sock # for service discovery and filter relevant containers
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro # ro = read-only, used to get logs of relevant containers
+    command: "-config.file=/etc/promtail/config.yaml"
+    ports:
+      - 9080:9080

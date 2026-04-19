@@ -1,2 +1,3 @@
 *.csv
 redis_data/
+loki_data/

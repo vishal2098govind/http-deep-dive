@@ -14,13 +14,12 @@ services:
       ]
     ports:
       - 8080:8080
+    labels:
+      - logging=promtail
   redis:
     image: redis:7.4-alpine
     restart: always
     ports:
       - "6379:6379"
     volumes:
-      - redis_data:/data
-
-volumes:
-  redis_data:
+      - ../redis_data:/data
