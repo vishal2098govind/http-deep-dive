@@ -1,0 +1,98 @@
+go run main.go
+iter[0]: conn.LocalAddress(127.0.0.1:55645)
+[go-routine-2]echo: [0]: hello, stay alive from
+iter[1]: conn.LocalAddress(127.0.0.1:55646)
+[go-routine-3]echo: [1]: hello, stay alive from
+iter[2]: conn.LocalAddress(127.0.0.1:55647)
+[go-routine-4]echo: [2]: hello, stay alive from
+iter[0]: conn.LocalAddress(127.0.0.1:55645)
+[go-routine-2]echo: [0]: hello, stay alive from
+iter[1]: conn.LocalAddress(127.0.0.1:55646)
+[go-routine-3]echo: [1]: hello, stay alive from
+iter[2]: conn.LocalAddress(127.0.0.1:55647)
+[go-routine-4]echo: [2]: hello, stay alive from
+iter[3]: conn.LocalAddress(127.0.0.1:55643)
+[go-routine-0]echo: [3]: hello, stay alive from
+iter[4]: conn.LocalAddress(127.0.0.1:55644)
+[go-routine-1]echo: [4]: hello, stay alive from
+
+---
+with idle-conn-timeout:
+
+go run main.go
+iter[0]: conn.LocalAddress(127.0.0.1:57050)
+[go-routine-2]echo: [0]: hello, stay alive from
+iter[1]: conn.LocalAddress(127.0.0.1:57051)
+[go-routine-3]echo: [1]: hello, stay alive from
+iter[2]: conn.LocalAddress(127.0.0.1:57052)
+[go-routine-4]echo: [2]: hello, stay alive from
+iter[0]: conn.LocalAddress(127.0.0.1:57050)
+[go-routine-2]echo: [0]: hello, stay alive from
+iter[1]: conn.LocalAddress(127.0.0.1:57051)
+[go-routine-3]echo: [1]: hello, stay alive from
+iter[2]: conn.LocalAddress(127.0.0.1:57052)
+[go-routine-4]echo: [2]: hello, stay alive from
+iter[3]: conn.LocalAddress(127.0.0.1:57048)
+[go-routine-0]echo: [3]: hello, stay alive from
+iter[4]: conn.LocalAddress(127.0.0.1:57049)
+[go-routine-1]echo: [4]: hello, stay alive from
+2026/05/10 00:32:04 [pool-idle-conn-eviction] closing conn: 127.0.0.1:57050
+2026/05/10 00:32:04 [pool-idle-conn-eviction] closing conn: 127.0.0.1:57051
+2026/05/10 00:32:04 [pool-idle-conn-eviction] closing conn: 127.0.0.1:57052
+
+---
+with MaxConnsPerHost semaphore (with interleaved scheduling run):
+
+go run main.go
+2026/05/10 02:25:51 [go-routine-2] blocking for MaxConnsPerHost
+2026/05/10 02:25:51 [go-routine-4] using conn.LocalAddress(127.0.0.1:58944)
+2026/05/10 02:25:51 [go-routine-8] blocking for MaxConnsPerHost
+2026/05/10 02:25:51 [go-routine-3] blocking for MaxConnsPerHost
+2026/05/10 02:25:51 [go-routine-6] blocking for MaxConnsPerHost
+2026/05/10 02:25:51 [go-routine-7] using conn.LocalAddress(127.0.0.1:58943)
+2026/05/10 02:25:51 [go-routine-0] using conn.LocalAddress(127.0.0.1:58940)
+2026/05/10 02:25:51 [go-routine-5] using conn.LocalAddress(127.0.0.1:58942)
+2026/05/10 02:25:51 [go-routine-1] using conn.LocalAddress(127.0.0.1:58939)
+2026/05/10 02:25:51 [go-routine-9] using conn.LocalAddress(127.0.0.1:58941)
+[response-from-server]:[go-routine-4]echo: [7]: hi
+[response-from-server]:[go-routine-3]echo: [5]: hi
+[response-from-server]:[go-routine-0]echo: [0]: hi
+[response-from-server]:[go-routine-2]echo: [9]: hi
+[response-from-server]:[go-routine-5]echo: [4]: hi
+[response-from-server]:[go-routine-1]echo: [1]: hi
+2026/05/10 02:25:53 [go-routine-2] using conn.LocalAddress(127.0.0.1:58945)
+2026/05/10 02:25:53 [go-routine-8] using conn.LocalAddress(127.0.0.1:58946)
+2026/05/10 02:25:53 [go-routine-6] using conn.LocalAddress(127.0.0.1:58947)
+[response-from-server]:[go-routine-7]echo: [2]: hi
+[response-from-server]:[go-routine-8]echo: [6]: hi
+[response-from-server]:[go-routine-6]echo: [8]: hi
+2026/05/10 02:25:55 [go-routine-3] using conn.LocalAddress(127.0.0.1:58948)
+[response-from-server]:[go-routine-9]echo: [3]: hi
+---
+with MaxConnsPerHost semaphore (without interleaved scheduling run):
+
+go run main.go
+2026/05/10 02:26:36 [go-routine-6] blocking for MaxConnsPerHost
+2026/05/10 02:26:36 [go-routine-7] blocking for MaxConnsPerHost
+2026/05/10 02:26:36 [go-routine-8] blocking for MaxConnsPerHost
+2026/05/10 02:26:36 [go-routine-4] blocking for MaxConnsPerHost
+2026/05/10 02:26:36 [go-routine-1] using conn.LocalAddress(127.0.0.1:58963)
+2026/05/10 02:26:36 [go-routine-3] using conn.LocalAddress(127.0.0.1:58964)
+2026/05/10 02:26:36 [go-routine-2] using conn.LocalAddress(127.0.0.1:58966)
+2026/05/10 02:26:36 [go-routine-5] using conn.LocalAddress(127.0.0.1:58967)
+2026/05/10 02:26:36 [go-routine-0] using conn.LocalAddress(127.0.0.1:58965)
+2026/05/10 02:26:36 [go-routine-9] using conn.LocalAddress(127.0.0.1:58968)
+[response-from-server]:[go-routine-5]echo: [9]: hi
+[response-from-server]:[go-routine-1]echo: [2]: hi
+[response-from-server]:[go-routine-2]echo: [5]: hi
+[response-from-server]:[go-routine-0]echo: [1]: hi
+[response-from-server]:[go-routine-4]echo: [3]: hi
+[response-from-server]:[go-routine-3]echo: [0]: hi
+2026/05/10 02:26:38 [go-routine-6] using conn.LocalAddress(127.0.0.1:58971)
+2026/05/10 02:26:38 [go-routine-8] using conn.LocalAddress(127.0.0.1:58970)
+2026/05/10 02:26:38 [go-routine-7] using conn.LocalAddress(127.0.0.1:58969)
+[response-from-server]:[go-routine-8]echo: [8]: hi
+[response-from-server]:[go-routine-7]echo: [7]: hi
+[response-from-server]:[go-routine-6]echo: [6]: hi
+2026/05/10 02:26:40 [go-routine-4] using conn.LocalAddress(127.0.0.1:58973)
+[response-from-server]:[go-routine-9]echo: [4]: hi

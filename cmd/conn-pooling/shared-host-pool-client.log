@@ -1,0 +1,544 @@
+
+go run main.go
+2026/05/10 16:48:14 [go-routine-:5050-2] blocking for MaxConnsPerHost
+2026/05/10 16:48:14 [go-routine-:4040-1] blocking for MaxConnsPerHost
+2026/05/10 16:48:14 [go-routine-:5050-0] blocking for MaxConnsPerHost
+2026/05/10 16:48:14 [go-routine-:3030-8] blocking for MaxConnsPerHost
+2026/05/10 16:48:14 [go-routine-:3030-5] blocking for MaxConnsPerHost
+2026/05/10 16:48:14 [go-routine-:3030-3] using conn.LocalAddress(127.0.0.1:64963)
+2026/05/10 16:48:14 [go-routine-:3030-2] using conn.LocalAddress(127.0.0.1:64960)
+2026/05/10 16:48:14 [go-routine-:5050-9] using conn.LocalAddress(127.0.0.1:64961)
+2026/05/10 16:48:14 [go-routine-:4040-2] blocking for MaxConnsPerHost
+2026/05/10 16:48:14 [go-routine-:3030-1] using conn.LocalAddress(127.0.0.1:64962)
+2026/05/10 16:48:14 [go-routine-:3030-0] using conn.LocalAddress(127.0.0.1:64964)
+2026/05/10 16:48:14 [go-routine-:4040-7] using conn.LocalAddress(127.0.0.1:64966)
+2026/05/10 16:48:14 [go-routine-:4040-6] using conn.LocalAddress(127.0.0.1:64965)
+2026/05/10 16:48:14 [go-routine-:5050-3] using conn.LocalAddress(127.0.0.1:64982)
+2026/05/10 16:48:14 [go-routine-:4040-4] using conn.LocalAddress(127.0.0.1:64976)
+2026/05/10 16:48:14 [go-routine-:4040-9] using conn.LocalAddress(127.0.0.1:64977)
+2026/05/10 16:48:14 [go-routine-:5050-7] using conn.LocalAddress(127.0.0.1:64967)
+2026/05/10 16:48:14 [go-routine-:3030-9] using conn.LocalAddress(127.0.0.1:64972)
+2026/05/10 16:48:14 [go-routine-:5050-8] using conn.LocalAddress(127.0.0.1:64968)
+2026/05/10 16:48:14 [go-routine-:5050-4] using conn.LocalAddress(127.0.0.1:64969)
+2026/05/10 16:48:14 [go-routine-:5050-5] using conn.LocalAddress(127.0.0.1:64971)
+2026/05/10 16:48:14 [go-routine-:5050-1] using conn.LocalAddress(127.0.0.1:64979)
+2026/05/10 16:48:14 [go-routine-:5050-6] using conn.LocalAddress(127.0.0.1:64970)
+2026/05/10 16:48:14 [go-routine-:4040-3] using conn.LocalAddress(127.0.0.1:64975)
+2026/05/10 16:48:14 [go-routine-:3030-6] using conn.LocalAddress(127.0.0.1:64981)
+2026/05/10 16:48:14 [go-routine-:4040-0] using conn.LocalAddress(127.0.0.1:64973)
+2026/05/10 16:48:14 [go-routine-:3030-4] using conn.LocalAddress(127.0.0.1:64978)
+2026/05/10 16:48:14 [go-routine-:4040-8] using conn.LocalAddress(127.0.0.1:64974)
+2026/05/10 16:48:14 [go-routine-:4040-5] using conn.LocalAddress(127.0.0.1:64980)
+2026/05/10 16:48:14 [go-routine-:3030-7] using conn.LocalAddress(127.0.0.1:64983)
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:5050-6][who-127.0.0.1:64970]:[go-routine-48]echo: [6]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:5050-8][who-127.0.0.1:64968]:[go-routine-45]echo: [8]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:4040-5][who-127.0.0.1:64980]:[go-routine-51]echo: [5]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:3030-7][who-127.0.0.1:64983]:[go-routine-49]echo: [7]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:5050-4][who-127.0.0.1:64969]:[go-routine-46]echo: [4]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:4040-3][who-127.0.0.1:64975]:[go-routine-47]echo: [3]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:5050-5][who-127.0.0.1:64971]:[go-routine-49]echo: [5]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:5050-9][who-127.0.0.1:64961]:[go-routine-44]echo: [9]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:3030-9][who-127.0.0.1:64972]:[go-routine-48]echo: [9]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:3030-4][who-127.0.0.1:64978]:[go-routine-51]echo: [4]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:4040-4][who-127.0.0.1:64976]:[go-routine-48]echo: [4]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:4040-0][who-127.0.0.1:64973]:[go-routine-46]echo: [0]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:4040-8][who-127.0.0.1:64974]:[go-routine-49]echo: [8]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:3030-3][who-127.0.0.1:64963]:[go-routine-44]echo: [3]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:4040-7][who-127.0.0.1:64966]:[go-routine-44]echo: [7]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:5050-3][who-127.0.0.1:64982]:[go-routine-50]echo: [3]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:3030-6][who-127.0.0.1:64981]:[go-routine-50]echo: [6]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:3030-2][who-127.0.0.1:64960]:[go-routine-45]echo: [2]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:4040-6][who-127.0.0.1:64965]:[go-routine-45]echo: [6]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:3030-0][who-127.0.0.1:64964]:[go-routine-47]echo: [0]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:5050-7][who-127.0.0.1:64967]:[go-routine-47]echo: [7]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:4040-9][who-127.0.0.1:64977]:[go-routine-50]echo: [9]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:5050-1][who-127.0.0.1:64979]:[go-routine-51]echo: [1]: hi
+2026/05/10 16:48:15 [response-from-server] for [go-routine-:3030-1][who-127.0.0.1:64962]:[go-routine-46]echo: [1]: hi
+2026/05/10 16:48:15 [go-routine-:5050-0] using conn.LocalAddress(127.0.0.1:64988)
+2026/05/10 16:48:15 [go-routine-:4040-1] using conn.LocalAddress(127.0.0.1:64984)
+2026/05/10 16:48:15 [go-routine-:5050-2] using conn.LocalAddress(127.0.0.1:64986)
+2026/05/10 16:48:15 [go-routine-:4040-2] using conn.LocalAddress(127.0.0.1:64985)
+2026/05/10 16:48:15 [go-routine-:3030-8] using conn.LocalAddress(127.0.0.1:64989)
+2026/05/10 16:48:15 [go-routine-:3030-5] using conn.LocalAddress(127.0.0.1:64987)
+2026/05/10 16:48:16 [response-from-server] for [go-routine-:3030-8][who-127.0.0.1:64989]:[go-routine-53]echo: [8]: hi
+2026/05/10 16:48:16 [response-from-server] for [go-routine-:5050-0][who-127.0.0.1:64988]:[go-routine-53]echo: [0]: hi
+2026/05/10 16:48:16 [response-from-server] for [go-routine-:4040-2][who-127.0.0.1:64985]:[go-routine-53]echo: [2]: hi
+2026/05/10 16:48:16 [response-from-server] for [go-routine-:3030-5][who-127.0.0.1:64987]:[go-routine-52]echo: [5]: hi
+2026/05/10 16:48:16 [response-from-server] for [go-routine-:4040-1][who-127.0.0.1:64984]:[go-routine-52]echo: [1]: hi
+2026/05/10 16:48:16 [response-from-server] for [go-routine-:5050-2][who-127.0.0.1:64986]:[go-routine-52]echo: [2]: hi
+
+---
+
+with microseconds
+
+go run main.go
+16:52:19.796002 [go-routine-:3030-7] blocking for MaxConnsPerHost
+16:52:19.796086 [go-routine-:4040-7] blocking for MaxConnsPerHost
+16:52:19.796245 [go-routine-:3030-2] using conn.LocalAddress(127.0.0.1:65046)
+16:52:19.796087 [go-routine-:3030-4] blocking for MaxConnsPerHost
+16:52:19.796122 [go-routine-:4040-4] blocking for MaxConnsPerHost
+16:52:19.796169 [go-routine-:5050-8] blocking for MaxConnsPerHost
+16:52:19.796148 [go-routine-:5050-7] blocking for MaxConnsPerHost
+16:52:19.796224 [go-routine-:3030-0] using conn.LocalAddress(127.0.0.1:65047)
+16:52:19.796100 [go-routine-:3030-1] using conn.LocalAddress(127.0.0.1:65045)
+16:52:19.796362 [go-routine-:4040-5] using conn.LocalAddress(127.0.0.1:65048)
+16:52:19.796150 [go-routine-:5050-9] using conn.LocalAddress(127.0.0.1:65049)
+16:52:19.796441 [go-routine-:3030-8] using conn.LocalAddress(127.0.0.1:65050)
+16:52:19.796509 [go-routine-:4040-2] using conn.LocalAddress(127.0.0.1:65052)
+16:52:19.796511 [go-routine-:4040-1] using conn.LocalAddress(127.0.0.1:65051)
+16:52:19.796537 [go-routine-:3030-5] using conn.LocalAddress(127.0.0.1:65053)
+16:52:19.796549 [go-routine-:3030-6] using conn.LocalAddress(127.0.0.1:65056)
+16:52:19.796568 [go-routine-:3030-9] using conn.LocalAddress(127.0.0.1:65054)
+16:52:19.796603 [go-routine-:4040-8] using conn.LocalAddress(127.0.0.1:65060)
+16:52:19.796611 [go-routine-:3030-3] using conn.LocalAddress(127.0.0.1:65059)
+16:52:19.796606 [go-routine-:5050-3] using conn.LocalAddress(127.0.0.1:65057)
+16:52:19.796607 [go-routine-:4040-0] using conn.LocalAddress(127.0.0.1:65055)
+16:52:19.796654 [go-routine-:5050-2] using conn.LocalAddress(127.0.0.1:65058)
+16:52:19.796684 [go-routine-:5050-4] using conn.LocalAddress(127.0.0.1:65064)
+16:52:19.796696 [go-routine-:5050-5] using conn.LocalAddress(127.0.0.1:65068)
+16:52:19.796683 [go-routine-:4040-6] using conn.LocalAddress(127.0.0.1:65065)
+16:52:19.796727 [go-routine-:5050-0] using conn.LocalAddress(127.0.0.1:65063)
+16:52:19.796698 [go-routine-:4040-9] using conn.LocalAddress(127.0.0.1:65062)
+16:52:19.796747 [go-routine-:5050-6] using conn.LocalAddress(127.0.0.1:65067)
+16:52:19.796752 [go-routine-:5050-1] using conn.LocalAddress(127.0.0.1:65066)
+16:52:19.796755 [go-routine-:4040-3] using conn.LocalAddress(127.0.0.1:65061)
+16:52:20.797638 [response-from-server] for [go-routine-:3030-1][who-127.0.0.1:65045]:[go-routine-54]echo: [1]: hi
+16:52:20.797671 [response-from-server] for [go-routine-:5050-2][who-127.0.0.1:65058]:[go-routine-56]echo: [2]: hi
+16:52:20.797555 [response-from-server] for [go-routine-:5050-6][who-127.0.0.1:65067]:[go-routine-59]echo: [6]: hi
+16:52:20.797694 [response-from-server] for [go-routine-:4040-3][who-127.0.0.1:65061]:[go-routine-59]echo: [3]: hi
+16:52:20.797687 [response-from-server] for [go-routine-:5050-3][who-127.0.0.1:65057]:[go-routine-55]echo: [3]: hi
+16:52:20.797626 [response-from-server] for [go-routine-:5050-1][who-127.0.0.1:65066]:[go-routine-60]echo: [1]: hi
+16:52:20.797752 [response-from-server] for [go-routine-:4040-5][who-127.0.0.1:65048]:[go-routine-54]echo: [5]: hi
+16:52:20.797753 [response-from-server] for [go-routine-:3030-9][who-127.0.0.1:65054]:[go-routine-58]echo: [9]: hi
+16:52:20.797754 [response-from-server] for [go-routine-:3030-3][who-127.0.0.1:65059]:[go-routine-61]echo: [3]: hi
+16:52:20.797856 [response-from-server] for [go-routine-:4040-9][who-127.0.0.1:65062]:[go-routine-60]echo: [9]: hi
+16:52:20.797861 [response-from-server] for [go-routine-:4040-6][who-127.0.0.1:65065]:[go-routine-61]echo: [6]: hi
+16:52:20.797807 [response-from-server] for [go-routine-:4040-8][who-127.0.0.1:65060]:[go-routine-58]echo: [8]: hi
+16:52:20.797850 [response-from-server] for [go-routine-:4040-0][who-127.0.0.1:65055]:[go-routine-57]echo: [0]: hi
+16:52:20.797922 [response-from-server] for [go-routine-:5050-4][who-127.0.0.1:65064]:[go-routine-58]echo: [4]: hi
+16:52:20.797814 [response-from-server] for [go-routine-:3030-5][who-127.0.0.1:65053]:[go-routine-59]echo: [5]: hi
+16:52:20.797928 [response-from-server] for [go-routine-:5050-0][who-127.0.0.1:65063]:[go-routine-57]echo: [0]: hi
+16:52:20.797853 [response-from-server] for [go-routine-:3030-8][who-127.0.0.1:65050]:[go-routine-57]echo: [8]: hi
+16:52:20.797968 [response-from-server] for [go-routine-:3030-0][who-127.0.0.1:65047]:[go-routine-55]echo: [0]: hi
+16:52:20.797787 [response-from-server] for [go-routine-:5050-9][who-127.0.0.1:65049]:[go-routine-54]echo: [9]: hi
+16:52:20.797820 [response-from-server] for [go-routine-:4040-1][who-127.0.0.1:65051]:[go-routine-55]echo: [1]: hi
+16:52:20.797854 [response-from-server] for [go-routine-:4040-2][who-127.0.0.1:65052]:[go-routine-56]echo: [2]: hi
+16:52:20.797784 [response-from-server] for [go-routine-:5050-5][who-127.0.0.1:65068]:[go-routine-61]echo: [5]: hi
+16:52:20.797946 [response-from-server] for [go-routine-:3030-6][who-127.0.0.1:65056]:[go-routine-60]echo: [6]: hi
+16:52:20.797946 [response-from-server] for [go-routine-:3030-2][who-127.0.0.1:65046]:[go-routine-56]echo: [2]: hi
+16:52:20.798811 [go-routine-:3030-7] using conn.LocalAddress(127.0.0.1:65069)
+16:52:20.798787 [go-routine-:5050-8] using conn.LocalAddress(127.0.0.1:65071)
+16:52:20.798910 [go-routine-:5050-7] using conn.LocalAddress(127.0.0.1:65074)
+16:52:20.798919 [go-routine-:4040-4] using conn.LocalAddress(127.0.0.1:65073)
+16:52:20.798926 [go-routine-:4040-7] using conn.LocalAddress(127.0.0.1:65070)
+16:52:20.798977 [go-routine-:3030-4] using conn.LocalAddress(127.0.0.1:65072)
+16:52:21.800958 [response-from-server] for [go-routine-:3030-4][who-127.0.0.1:65072]:[go-routine-63]echo: [4]: hi
+16:52:21.801063 [response-from-server] for [go-routine-:5050-7][who-127.0.0.1:65074]:[go-routine-63]echo: [7]: hi
+16:52:21.801119 [response-from-server] for [go-routine-:4040-7][who-127.0.0.1:65070]:[go-routine-62]echo: [7]: hi
+16:52:21.801145 [response-from-server] for [go-routine-:3030-7][who-127.0.0.1:65069]:[go-routine-62]echo: [7]: hi
+16:52:21.801202 [response-from-server] for [go-routine-:5050-8][who-127.0.0.1:65071]:[go-routine-62]echo: [8]: hi
+16:52:21.801205 [response-from-server] for [go-routine-:4040-4][who-127.0.0.1:65073]:[go-routine-63]echo: [4]: hi
+
+---
+
+go run main.go
+17:44:29.891915 [go-routine-:3030-9] blocking for MaxConnsPerHost
+17:44:29.891941 [go-routine-:3030-7] blocking for MaxConnsPerHost
+17:44:29.892041 [go-routine-:5050-9] using conn.LocalAddress(127.0.0.1:49389)
+17:44:29.892234 [go-routine-:3030-0] using conn.LocalAddress(127.0.0.1:49388)
+17:44:29.892054 [go-routine-:3030-1] using conn.LocalAddress(127.0.0.1:49390)
+17:44:29.892279 [go-routine-:3030-6] using conn.LocalAddress(127.0.0.1:49391)
+17:44:29.892313 [go-routine-:3030-3] using conn.LocalAddress(127.0.0.1:49392)
+17:44:29.892087 [go-routine-:3030-5] using conn.LocalAddress(127.0.0.1:49387)
+17:44:29.892356 [go-routine-:4040-7] using conn.LocalAddress(127.0.0.1:49394)
+17:44:29.892405 [go-routine-:3030-8] using conn.LocalAddress(127.0.0.1:49395)
+17:44:29.892453 [go-routine-:3030-4] using conn.LocalAddress(127.0.0.1:49393)
+17:44:29.892497 [go-routine-:5050-8] blocking for MaxConnsPerHost
+17:44:29.892504 [go-routine-:5050-2] blocking for MaxConnsPerHost
+17:44:29.892526 [go-routine-:4040-8] blocking for MaxConnsPerHost
+17:44:29.892533 [go-routine-:4040-9] blocking for MaxConnsPerHost
+17:44:29.892581 [go-routine-:3030-2] using conn.LocalAddress(127.0.0.1:49396)
+17:44:29.892628 [go-routine-:5050-4] using conn.LocalAddress(127.0.0.1:49399)
+17:44:29.892629 [go-routine-:4040-1] using conn.LocalAddress(127.0.0.1:49398)
+17:44:29.892660 [go-routine-:4040-5] using conn.LocalAddress(127.0.0.1:49397)
+17:44:29.892735 [go-routine-:5050-3] using conn.LocalAddress(127.0.0.1:49402)
+17:44:29.892753 [go-routine-:4040-0] using conn.LocalAddress(127.0.0.1:49404)
+17:44:29.892934 [go-routine-:4040-6] using conn.LocalAddress(127.0.0.1:49401)
+17:44:29.892903 [go-routine-:5050-5] using conn.LocalAddress(127.0.0.1:49403)
+17:44:29.892913 [go-routine-:4040-4] using conn.LocalAddress(127.0.0.1:49400)
+17:44:29.892980 [go-routine-:5050-7] using conn.LocalAddress(127.0.0.1:49405)
+17:44:29.893005 [go-routine-:5050-0] using conn.LocalAddress(127.0.0.1:49408)
+17:44:29.893006 [go-routine-:5050-1] using conn.LocalAddress(127.0.0.1:49410)
+17:44:29.893026 [go-routine-:5050-6] using conn.LocalAddress(127.0.0.1:49409)
+17:44:29.893018 [go-routine-:4040-3] using conn.LocalAddress(127.0.0.1:49407)
+17:44:29.893098 [go-routine-:4040-2] using conn.LocalAddress(127.0.0.1:49406)
+17:44:30.892692 [response-from-server] for [go-routine-:3030-3][who-127.0.0.1:49392]:[go-routine-88]echo: [3]: hi
+17:44:30.892772 [response-from-server] for [go-routine-:3030-5][who-127.0.0.1:49387]:[go-routine-85]echo: [5]: hi
+17:44:30.892810 [response-from-server] for [go-routine-:3030-1][who-127.0.0.1:49390]:[go-routine-84]echo: [1]: hi
+17:44:30.892811 [response-from-server] for [go-routine-:5050-9][who-127.0.0.1:49389]:[go-routine-84]echo: [9]: hi
+17:44:30.892772 returning conn :3030 to pool
+17:44:30.892862 [response-from-server] for [go-routine-:3030-6][who-127.0.0.1:49391]:[go-routine-87]echo: [6]: hi
+17:44:30.892864 [response-from-server] for [go-routine-:3030-8][who-127.0.0.1:49395]:[go-routine-90]echo: [8]: hi
+17:44:30.892761 [response-from-server] for [go-routine-:5050-4][who-127.0.0.1:49399]:[go-routine-85]echo: [4]: hi
+17:44:30.892897 [response-from-server] for [go-routine-:3030-4][who-127.0.0.1:49393]:[go-routine-89]echo: [4]: hi
+17:44:30.892902 [response-from-server] for [go-routine-:4040-0][who-127.0.0.1:49404]:[go-routine-87]echo: [0]: hi
+17:44:30.892873 returning conn :3030 to pool
+17:44:30.892925 returning conn :3030 to pool
+17:44:30.892907 [response-from-server] for [go-routine-:4040-5][who-127.0.0.1:49397]:[go-routine-85]echo: [5]: hi
+17:44:30.892847 [response-from-server] for [go-routine-:4040-7][who-127.0.0.1:49394]:[go-routine-84]echo: [7]: hi
+17:44:30.892931 reached max-idle for this host(:3030), releasing conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+17:44:30.892843 [response-from-server] for [go-routine-:4040-1][who-127.0.0.1:49398]:[go-routine-86]echo: [1]: hi
+17:44:30.892884 [response-from-server] for [go-routine-:5050-3][who-127.0.0.1:49402]:[go-routine-86]echo: [3]: hi
+17:44:30.892707 [response-from-server] for [go-routine-:3030-0][who-127.0.0.1:49388]:[go-routine-86]echo: [0]: hi
+17:44:30.892740 [response-from-server] for [go-routine-:3030-2][who-127.0.0.1:49396]:[go-routine-91]echo: [2]: hi
+17:44:30.892988 returning conn :5050 to pool
+17:44:30.894711 reached max-idle for this host(:3030), releasing conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+17:44:30.893072 [response-from-server] for [go-routine-:4040-6][who-127.0.0.1:49401]:[go-routine-88]echo: [6]: hi
+17:44:30.893096 [response-from-server] for [go-routine-:4040-4][who-127.0.0.1:49400]:[go-routine-89]echo: [4]: hi
+17:44:30.893121 [response-from-server] for [go-routine-:5050-7][who-127.0.0.1:49405]:[go-routine-87]echo: [7]: hi
+17:44:30.893143 [response-from-server] for [go-routine-:5050-1][who-127.0.0.1:49410]:[go-routine-90]echo: [1]: hi
+17:44:30.893143 [response-from-server] for [go-routine-:5050-0][who-127.0.0.1:49408]:[go-routine-91]echo: [0]: hi
+17:44:30.893151 [response-from-server] for [go-routine-:5050-6][who-127.0.0.1:49409]:[go-routine-89]echo: [6]: hi
+17:44:30.893155 [response-from-server] for [go-routine-:5050-5][who-127.0.0.1:49403]:[go-routine-88]echo: [5]: hi
+17:44:30.893163 [response-from-server] for [go-routine-:4040-3][who-127.0.0.1:49407]:[go-routine-91]echo: [3]: hi
+17:44:30.893234 [response-from-server] for [go-routine-:4040-2][who-127.0.0.1:49406]:[go-routine-90]echo: [2]: hi
+17:44:30.893262 [go-routine-:3030-9] using conn.LocalAddress(127.0.0.1:49411)
+17:44:30.894762 returning conn :5050 to pool
+17:44:30.894842 [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+17:44:30.894872 reached max-idle for this host(:3030), releasing conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+17:44:30.894894 [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+17:44:30.894916 [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+17:44:30.894933 [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+17:44:30.894950 [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+17:44:30.894970 reached max-idle for this host(:3030), releasing conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+17:44:30.894988 reached max-idle for this host(:3030), releasing conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+17:44:30.895005 [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+17:44:30.895022 [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+17:44:30.895041 [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+17:44:30.895059 [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+17:44:30.895077 [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+17:44:30.895095 [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+17:44:30.895111 [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+17:44:30.895127 [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+17:44:30.895145 [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+17:44:30.895288 [go-routine-:3030-7] using conn.LocalAddress(127.0.0.1:49412)
+17:44:30.895341 [go-routine-:4040-8] using conn.LocalAddress(127.0.0.1:49413)
+17:44:30.895417 [go-routine-:4040-9] using conn.LocalAddress(127.0.0.1:49414)
+17:44:30.895474 [go-routine-:5050-2] using conn.LocalAddress(127.0.0.1:49415)
+17:44:30.895753 [go-routine-:5050-8] using conn.LocalAddress(127.0.0.1:49416)
+17:44:31.895978 [response-from-server] for [go-routine-:5050-8][who-127.0.0.1:49416]:[go-routine-93]echo: [8]: hi
+17:44:31.895995 [response-from-server] for [go-routine-:3030-7][who-127.0.0.1:49412]:[go-routine-93]echo: [7]: hi
+17:44:31.896001 [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+17:44:31.896022 [response-from-server] for [go-routine-:3030-9][who-127.0.0.1:49411]:[go-routine-92]echo: [9]: hi
+17:44:31.895978 [response-from-server] for [go-routine-:4040-9][who-127.0.0.1:49414]:[go-routine-93]echo: [9]: hi
+17:44:31.895984 [response-from-server] for [go-routine-:4040-8][who-127.0.0.1:49413]:[go-routine-92]echo: [8]: hi
+17:44:31.895935 [response-from-server] for [go-routine-:5050-2][who-127.0.0.1:49415]:[go-routine-92]echo: [2]: hi
+17:44:31.896049 reached max-idle for this host(:3030), releasing conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+17:44:31.896070 [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+17:44:31.896085 reached max-idle for this host(:3030), releasing conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+17:44:31.896115 [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+17:44:31.896135 [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+
+---
+
+maxIdleConnsPerHost := 3
+maxIdleConns := 5
+maxConnsPerHost := 8
+
+go run main.go
+18:01:29.044620 [round-1][go-routine-:3030-7] blocking for MaxConnsPerHost
+18:01:29.045337 [round-1][go-routine-:5050-1] blocking for MaxConnsPerHost
+18:01:29.045045 [round-1][go-routine-:4040-7] blocking for MaxConnsPerHost
+18:01:29.045340 [round-1][go-routine-:5050-6] blocking for MaxConnsPerHost
+18:01:29.044950 [round-1][go-routine-:3030-9] blocking for MaxConnsPerHost
+18:01:29.045047 [round-1][go-routine-:5050-9] using conn.LocalAddress(127.0.0.1:49915)
+18:01:29.044971 [round-1][go-routine-:4040-1] blocking for MaxConnsPerHost
+18:01:29.045307 [round-1][go-routine-:3030-0] using conn.LocalAddress(127.0.0.1:49917)
+18:01:29.044999 [round-1][go-routine-:3030-5] using conn.LocalAddress(127.0.0.1:49918)
+18:01:29.045638 [round-1][go-routine-:3030-8] using conn.LocalAddress(127.0.0.1:49919)
+18:01:29.045229 [round-1][go-routine-:3030-1] using conn.LocalAddress(127.0.0.1:49916)
+18:01:29.045701 [round-1][go-routine-:4040-8] using conn.LocalAddress(127.0.0.1:49920)
+18:01:29.045730 [round-1][go-routine-:3030-6] using conn.LocalAddress(127.0.0.1:49921)
+18:01:29.045796 [round-1][go-routine-:4040-6] using conn.LocalAddress(127.0.0.1:49927)
+18:01:29.045853 [round-1][go-routine-:4040-5] using conn.LocalAddress(127.0.0.1:49926)
+18:01:29.045948 [round-1][go-routine-:4040-0] using conn.LocalAddress(127.0.0.1:49922)
+18:01:29.045952 [round-1][go-routine-:3030-2] using conn.LocalAddress(127.0.0.1:49924)
+18:01:29.045983 [round-1][go-routine-:4040-3] using conn.LocalAddress(127.0.0.1:49923)
+18:01:29.046131 [round-1][go-routine-:3030-3] using conn.LocalAddress(127.0.0.1:49925)
+18:01:29.046155 [round-1][go-routine-:4040-9] using conn.LocalAddress(127.0.0.1:49928)
+18:01:29.046523 [round-1][go-routine-:5050-8] using conn.LocalAddress(127.0.0.1:49938)
+18:01:29.046627 [round-1][go-routine-:5050-3] using conn.LocalAddress(127.0.0.1:49936)
+18:01:29.046661 [round-1][go-routine-:5050-7] using conn.LocalAddress(127.0.0.1:49937)
+18:01:29.046715 [round-1][go-routine-:5050-4] using conn.LocalAddress(127.0.0.1:49933)
+18:01:29.046753 [round-1][go-routine-:4040-2] using conn.LocalAddress(127.0.0.1:49934)
+18:01:29.046708 [round-1][go-routine-:5050-2] using conn.LocalAddress(127.0.0.1:49935)
+18:01:29.046735 [round-1][go-routine-:5050-5] using conn.LocalAddress(127.0.0.1:49932)
+18:01:29.046780 [round-1][go-routine-:3030-4] using conn.LocalAddress(127.0.0.1:49931)
+18:01:29.046803 [round-1][go-routine-:5050-0] using conn.LocalAddress(127.0.0.1:49930)
+18:01:29.046812 [round-1][go-routine-:4040-4] using conn.LocalAddress(127.0.0.1:49929)
+18:01:30.046039 [round-1][response-from-server] for [go-routine-:5050-9][who-127.0.0.1:49915]:[go-routine-163]echo: [9]: hi
+18:01:30.046078 [round-1] returning conn :5050 to pool
+18:01:30.046039 [round-1][response-from-server] for [go-routine-:4040-8][who-127.0.0.1:49920]:[go-routine-164]echo: [8]: hi
+18:01:30.046137 [round-1][response-from-server] for [go-routine-:4040-3][who-127.0.0.1:49923]:[go-routine-167]echo: [3]: hi
+18:01:30.046153 [round-1] returning conn :4040 to pool
+18:01:30.046202 [round-1][response-from-server] for [go-routine-:3030-2][who-127.0.0.1:49924]:[go-routine-165]echo: [2]: hi
+18:01:30.046173 [round-1][response-from-server] for [go-routine-:3030-1][who-127.0.0.1:49916]:[go-routine-162]echo: [1]: hi
+18:01:30.046254 [round-1] returning conn :4040 to pool
+18:01:30.046251 [round-1][response-from-server] for [go-routine-:3030-3][who-127.0.0.1:49925]:[go-routine-166]echo: [3]: hi
+18:01:30.046276 [round-1] returning conn :3030 to pool
+18:01:30.046059 [round-1][response-from-server] for [go-routine-:4040-6][who-127.0.0.1:49927]:[go-routine-166]echo: [6]: hi
+18:01:30.046168 [round-1][response-from-server] for [go-routine-:3030-0][who-127.0.0.1:49917]:[go-routine-161]echo: [0]: hi
+18:01:30.046159 [round-1][response-from-server] for [go-routine-:4040-5][who-127.0.0.1:49926]:[go-routine-165]echo: [5]: hi
+18:01:30.046163 [round-1][response-from-server] for [go-routine-:3030-6][who-127.0.0.1:49921]:[go-routine-164]echo: [6]: hi
+18:01:30.046337 [round-1] returning conn :3030 to pool
+18:01:30.047846 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:01:30.046206 [round-1][response-from-server] for [go-routine-:3030-5][who-127.0.0.1:49918]:[go-routine-160]echo: [5]: hi
+18:01:30.046219 [round-1][response-from-server] for [go-routine-:3030-8][who-127.0.0.1:49919]:[go-routine-163]echo: [8]: hi
+18:01:30.046223 [round-1][response-from-server] for [go-routine-:4040-0][who-127.0.0.1:49922]:[go-routine-168]echo: [0]: hi
+18:01:30.046355 [round-1][response-from-server] for [go-routine-:4040-9][who-127.0.0.1:49928]:[go-routine-169]echo: [9]: hi
+18:01:30.046673 [round-1][response-from-server] for [go-routine-:5050-8][who-127.0.0.1:49938]:[go-routine-170]echo: [8]: hi
+18:01:30.046730 [round-1][response-from-server] for [go-routine-:5050-3][who-127.0.0.1:49936]:[go-routine-169]echo: [3]: hi
+18:01:30.046767 [round-1][response-from-server] for [go-routine-:5050-7][who-127.0.0.1:49937]:[go-routine-168]echo: [7]: hi
+18:01:30.046904 [round-1][response-from-server] for [go-routine-:4040-2][who-127.0.0.1:49934]:[go-routine-171]echo: [2]: hi
+18:01:30.046942 [round-1][response-from-server] for [go-routine-:3030-4][who-127.0.0.1:49931]:[go-routine-167]echo: [4]: hi
+18:01:30.046954 [round-1][response-from-server] for [go-routine-:4040-4][who-127.0.0.1:49929]:[go-routine-170]echo: [4]: hi
+18:01:30.046990 [round-1][response-from-server] for [go-routine-:5050-5][who-127.0.0.1:49932]:[go-routine-165]echo: [5]: hi
+18:01:30.047002 [round-1][response-from-server] for [go-routine-:5050-4][who-127.0.0.1:49933]:[go-routine-166]echo: [4]: hi
+18:01:30.047014 [round-1][response-from-server] for [go-routine-:5050-2][who-127.0.0.1:49935]:[go-routine-167]echo: [2]: hi
+18:01:30.047031 [round-1][response-from-server] for [go-routine-:5050-0][who-127.0.0.1:49930]:[go-routine-164]echo: [0]: hi
+18:01:30.047905 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:01:30.048246 [round-1][go-routine-:3030-7] using conn.LocalAddress(127.0.0.1:49939)
+18:01:30.048877 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:01:30.049062 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:01:30.049151 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:01:30.049212 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:01:30.049241 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:01:30.049302 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:01:30.049345 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:01:30.049375 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:01:30.049403 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:01:30.049429 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:01:30.049456 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:01:30.049484 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:01:30.049509 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:01:30.049535 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:01:30.049844 [round-1][go-routine-:4040-1] using conn.LocalAddress(127.0.0.1:49942)
+18:01:30.049599 [round-1][go-routine-:3030-9] using conn.LocalAddress(127.0.0.1:49941)
+18:01:30.049715 [round-1][go-routine-:4040-7] using conn.LocalAddress(127.0.0.1:49940)
+18:01:30.049873 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:01:30.049953 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:01:30.049987 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:01:30.050432 [round-1][go-routine-:5050-6] using conn.LocalAddress(127.0.0.1:49944)
+18:01:30.050503 [round-1][go-routine-:5050-1] using conn.LocalAddress(127.0.0.1:49943)
+18:01:31.049446 [round-1][response-from-server] for [go-routine-:3030-7][who-127.0.0.1:49939]:[go-routine-168]echo: [7]: hi
+18:01:31.049496 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:01:31.050240 [round-1][response-from-server] for [go-routine-:4040-7][who-127.0.0.1:49940]:[go-routine-172]echo: [7]: hi
+18:01:31.050262 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:01:31.050317 [round-1][response-from-server] for [go-routine-:4040-1][who-127.0.0.1:49942]:[go-routine-173]echo: [1]: hi
+18:01:31.050330 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:01:31.050535 [round-1][response-from-server] for [go-routine-:3030-9][who-127.0.0.1:49941]:[go-routine-169]echo: [9]: hi
+18:01:31.050558 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:01:31.050626 [round-1][response-from-server] for [go-routine-:5050-6][who-127.0.0.1:49944]:[go-routine-172]echo: [6]: hi
+18:01:31.050811 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:01:31.050670 [round-1][response-from-server] for [go-routine-:5050-1][who-127.0.0.1:49943]:[go-routine-171]echo: [1]: hi
+18:01:31.050892 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:01:31.051097 [round-2] [go-routine-:5050-4] using conn from pool and releasing global IdleConns
+18:01:31.051160 [round-2][go-routine-:5050-4] using conn.LocalAddress(127.0.0.1:49915)
+18:01:31.051197 [round-2] [go-routine-:3030-4] using conn from pool and releasing global IdleConns
+18:01:31.051214 [round-2][go-routine-:3030-4] using conn.LocalAddress(127.0.0.1:49916)
+18:01:31.051242 [round-2] [go-routine-:3030-2] using conn from pool and releasing global IdleConns
+18:01:31.051256 [round-2][go-routine-:3030-2] using conn.LocalAddress(127.0.0.1:49924)
+18:01:31.051262 [round-2] [go-routine-:4040-2] using conn from pool and releasing global IdleConns
+18:01:31.051276 [round-2][go-routine-:4040-2] using conn.LocalAddress(127.0.0.1:49920)
+18:01:31.051303 [round-2] [go-routine-:4040-0] using conn from pool and releasing global IdleConns
+18:01:31.051317 [round-2][go-routine-:4040-0] using conn.LocalAddress(127.0.0.1:49923)
+18:01:31.052119 [round-2][go-routine-:4040-3] using conn.LocalAddress(127.0.0.1:49947)
+18:01:31.052125 [round-2][go-routine-:5050-1] using conn.LocalAddress(127.0.0.1:49945)
+18:01:31.052187 [round-2][go-routine-:5050-2] using conn.LocalAddress(127.0.0.1:49948)
+18:01:31.052208 [round-2][go-routine-:5050-0] using conn.LocalAddress(127.0.0.1:49946)
+18:01:31.052276 [round-2][go-routine-:4040-4] using conn.LocalAddress(127.0.0.1:49949)
+18:01:31.052355 [round-2][go-routine-:3030-3] using conn.LocalAddress(127.0.0.1:49950)
+18:01:31.052894 [round-2][go-routine-:5050-3] using conn.LocalAddress(127.0.0.1:49954)
+18:01:31.052971 [round-2][go-routine-:4040-1] using conn.LocalAddress(127.0.0.1:49952)
+18:01:31.052993 [round-2][go-routine-:3030-0] using conn.LocalAddress(127.0.0.1:49951)
+18:01:31.053006 [round-2][go-routine-:3030-1] using conn.LocalAddress(127.0.0.1:49953)
+18:01:32.051552 [round-2][response-from-server] for [go-routine-:4040-2][who-127.0.0.1:49920]:[go-routine-164]echo: [2]: hi
+18:01:32.051602 [round-2] returning conn :4040 to pool
+18:01:32.051699 [round-2][response-from-server] for [go-routine-:3030-4][who-127.0.0.1:49916]:[go-routine-162]echo: [4]: hi
+18:01:32.051723 [round-2] returning conn :3030 to pool
+18:01:32.051741 [round-2][response-from-server] for [go-routine-:4040-0][who-127.0.0.1:49923]:[go-routine-167]echo: [0]: hi
+18:01:32.051769 [round-2][response-from-server] for [go-routine-:3030-2][who-127.0.0.1:49924]:[go-routine-165]echo: [2]: hi
+18:01:32.051780 [round-2] returning conn :4040 to pool
+18:01:32.051801 [round-2][response-from-server] for [go-routine-:5050-4][who-127.0.0.1:49915]:[go-routine-163]echo: [4]: hi
+18:01:32.051807 [round-2] returning conn :3030 to pool
+18:01:32.051831 [round-2] returning conn :5050 to pool
+18:01:32.052344 [round-2][response-from-server] for [go-routine-:5050-0][who-127.0.0.1:49946]:[go-routine-175]echo: [0]: hi
+18:01:32.052422 [round-2] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:01:32.052452 [round-2][response-from-server] for [go-routine-:5050-1][who-127.0.0.1:49945]:[go-routine-174]echo: [1]: hi
+18:01:32.052476 [round-2] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:01:32.052515 [round-2][response-from-server] for [go-routine-:3030-3][who-127.0.0.1:49950]:[go-routine-170]echo: [3]: hi
+18:01:32.052536 [round-2] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:01:32.052538 [round-2][response-from-server] for [go-routine-:4040-4][who-127.0.0.1:49949]:[go-routine-175]echo: [4]: hi
+18:01:32.052578 [round-2] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:01:32.052585 [round-2][response-from-server] for [go-routine-:5050-2][who-127.0.0.1:49948]:[go-routine-173]echo: [2]: hi
+18:01:32.053343 [round-2][response-from-server] for [go-routine-:3030-1][who-127.0.0.1:49953]:[go-routine-172]echo: [1]: hi
+18:01:32.053362 [round-2] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:01:32.053369 [round-2][response-from-server] for [go-routine-:4040-1][who-127.0.0.1:49952]:[go-routine-176]echo: [1]: hi
+18:01:32.052626 [round-2][response-from-server] for [go-routine-:4040-3][who-127.0.0.1:49947]:[go-routine-174]echo: [3]: hi
+18:01:32.053011 [round-2][response-from-server] for [go-routine-:5050-3][who-127.0.0.1:49954]:[go-routine-176]echo: [3]: hi
+18:01:32.053289 [round-2][response-from-server] for [go-routine-:3030-0][who-127.0.0.1:49951]:[go-routine-171]echo: [0]: hi
+18:01:32.053399 [round-2] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:01:32.053504 [round-2] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:01:32.053764 [round-2] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:01:32.053816 [round-2] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:01:32.053862 [round-2] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+
+---
+
+go run main.go
+18:20:59.168860 [round-1][go-routine-:5050-9] using conn.LocalAddress(127.0.0.1:50252)
+18:20:59.169180 [round-1][go-routine-:3030-0] using conn.LocalAddress(127.0.0.1:50257)
+18:20:59.169290 [round-1][go-routine-:3030-5] using conn.LocalAddress(127.0.0.1:50256)
+18:20:59.168949 [round-1][go-routine-:3030-4] blocking for MaxConnsPerHost
+18:20:59.168946 [round-1][go-routine-:3030-3] blocking for MaxConnsPerHost
+18:20:59.169383 [round-1][go-routine-:4040-9] using conn.LocalAddress(127.0.0.1:50255)
+18:20:59.169449 [round-1][go-routine-:3030-8] using conn.LocalAddress(127.0.0.1:50263)
+18:20:59.169046 [round-1][go-routine-:3030-9] using conn.LocalAddress(127.0.0.1:50254)
+18:20:59.169542 [round-1][go-routine-:5050-0] using conn.LocalAddress(127.0.0.1:50264)
+18:20:59.169544 [round-1][go-routine-:3030-2] using conn.LocalAddress(127.0.0.1:50261)
+18:20:59.169593 [round-1][go-routine-:3030-7] using conn.LocalAddress(127.0.0.1:50260)
+18:20:59.169692 [round-1][go-routine-:5050-1] using conn.LocalAddress(127.0.0.1:50265)
+18:20:59.169736 [round-1][go-routine-:4040-1] using conn.LocalAddress(127.0.0.1:50258)
+18:20:59.169766 [round-1][go-routine-:3030-1] using conn.LocalAddress(127.0.0.1:50259)
+18:20:59.169814 [round-1][go-routine-:5050-2] using conn.LocalAddress(127.0.0.1:50266)
+18:20:59.170199 [round-1][go-routine-:5050-6] using conn.LocalAddress(127.0.0.1:50267)
+18:20:59.169907 [round-1][go-routine-:5050-4] blocking for MaxConnsPerHost
+18:20:59.170015 [round-1][go-routine-:5050-5] using conn.LocalAddress(127.0.0.1:50268)
+18:20:59.170074 [round-1][go-routine-:5050-8] blocking for MaxConnsPerHost
+18:20:59.170867 [round-1][go-routine-:5050-3] using conn.LocalAddress(127.0.0.1:50269)
+18:20:59.171174 [round-1][go-routine-:5050-7] using conn.LocalAddress(127.0.0.1:50270)
+18:20:59.170936 [round-1][go-routine-:4040-4] blocking for MaxConnsPerHost
+18:20:59.170921 [round-1][go-routine-:4040-7] using conn.LocalAddress(127.0.0.1:50272)
+18:20:59.170994 [round-1][go-routine-:4040-8] using conn.LocalAddress(127.0.0.1:50273)
+18:20:59.171018 [round-1][go-routine-:4040-2] blocking for MaxConnsPerHost
+18:20:59.171021 [round-1][go-routine-:4040-6] using conn.LocalAddress(127.0.0.1:50271)
+18:20:59.170168 [round-1][go-routine-:3030-6] using conn.LocalAddress(127.0.0.1:50262)
+18:20:59.171678 [round-1][go-routine-:4040-3] using conn.LocalAddress(127.0.0.1:50274)
+18:20:59.171647 [round-1][go-routine-:4040-0] using conn.LocalAddress(127.0.0.1:50253)
+18:20:59.171700 [round-1][go-routine-:4040-5] using conn.LocalAddress(127.0.0.1:50275)
+18:21:00.170138 [round-1][response-from-server] for [go-routine-:3030-2][who-127.0.0.1:50261]:[go-routine-178]echo: [2]: hi
+18:21:00.170182 [round-1] returning conn :3030 to pool
+18:21:00.170223 [round-1][response-from-server] for [go-routine-:5050-0][who-127.0.0.1:50264]:[go-routine-178]echo: [0]: hi
+18:21:00.170244 [round-1] returning conn :5050 to pool
+18:21:00.170242 [round-1][response-from-server] for [go-routine-:4040-9][who-127.0.0.1:50255]:[go-routine-178]echo: [9]: hi
+18:21:00.170286 [round-1] returning conn :4040 to pool
+18:21:00.170296 [round-1][response-from-server] for [go-routine-:3030-9][who-127.0.0.1:50254]:[go-routine-174]echo: [9]: hi
+18:21:00.170319 [round-1][response-from-server] for [go-routine-:3030-7][who-127.0.0.1:50260]:[go-routine-177]echo: [7]: hi
+18:21:00.170332 [round-1] returning conn :3030 to pool
+18:21:00.170367 [round-1][response-from-server] for [go-routine-:3030-0][who-127.0.0.1:50257]:[go-routine-173]echo: [0]: hi
+18:21:00.170371 [round-1] returning conn :3030 to pool
+18:21:00.174171 [round-1] reached max-idle for this host(:3030), releasing conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:21:00.170394 [round-1][response-from-server] for [go-routine-:3030-8][who-127.0.0.1:50263]:[go-routine-179]echo: [8]: hi
+18:21:00.174515 [round-1] reached max-idle for this host(:3030), releasing conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:21:00.170376 [round-1][response-from-server] for [go-routine-:5050-9][who-127.0.0.1:50252]:[go-routine-177]echo: [9]: hi
+18:21:00.174705 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:21:00.170430 [round-1][response-from-server] for [go-routine-:3030-5][who-127.0.0.1:50256]:[go-routine-175]echo: [5]: hi
+18:21:00.174957 [round-1] reached max-idle for this host(:3030), releasing conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:21:00.171224 [round-1][response-from-server] for [go-routine-:5050-2][who-127.0.0.1:50266]:[go-routine-180]echo: [2]: hi
+18:21:00.176777 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:21:00.171375 [round-1][response-from-server] for [go-routine-:4040-1][who-127.0.0.1:50258]:[go-routine-179]echo: [1]: hi
+18:21:00.177558 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:21:00.171398 [round-1][response-from-server] for [go-routine-:5050-6][who-127.0.0.1:50267]:[go-routine-181]echo: [6]: hi
+18:21:00.177801 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:21:00.171421 [round-1][response-from-server] for [go-routine-:5050-1][who-127.0.0.1:50265]:[go-routine-179]echo: [1]: hi
+18:21:00.177836 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:21:00.171462 [round-1][response-from-server] for [go-routine-:5050-7][who-127.0.0.1:50270]:[go-routine-184]echo: [7]: hi
+18:21:00.177865 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:21:00.171439 [round-1][response-from-server] for [go-routine-:3030-1][who-127.0.0.1:50259]:[go-routine-176]echo: [1]: hi
+18:21:00.178377 [round-1] reached max-idle for this host(:3030), releasing conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:21:00.171495 [round-1][response-from-server] for [go-routine-:4040-8][who-127.0.0.1:50273]:[go-routine-182]echo: [8]: hi
+18:21:00.178434 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:21:00.171528 [round-1][response-from-server] for [go-routine-:5050-3][who-127.0.0.1:50269]:[go-routine-183]echo: [3]: hi
+18:21:00.178658 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:21:00.171534 [round-1][response-from-server] for [go-routine-:4040-7][who-127.0.0.1:50272]:[go-routine-181]echo: [7]: hi
+18:21:00.178695 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:21:00.171580 [round-1][response-from-server] for [go-routine-:5050-5][who-127.0.0.1:50268]:[go-routine-182]echo: [5]: hi
+18:21:00.178725 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:21:00.171603 [round-1][response-from-server] for [go-routine-:4040-6][who-127.0.0.1:50271]:[go-routine-180]echo: [6]: hi
+18:21:00.178787 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:21:00.171652 [round-1][response-from-server] for [go-routine-:3030-6][who-127.0.0.1:50262]:[go-routine-180]echo: [6]: hi
+18:21:00.181002 [round-1] reached max-idle for this host(:3030), releasing conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:21:00.171983 [round-1][response-from-server] for [go-routine-:4040-3][who-127.0.0.1:50274]:[go-routine-183]echo: [3]: hi
+18:21:00.181058 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:21:00.172053 [round-1][response-from-server] for [go-routine-:4040-0][who-127.0.0.1:50253]:[go-routine-177]echo: [0]: hi
+18:21:00.181164 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:21:00.172645 [round-1][response-from-server] for [go-routine-:4040-5][who-127.0.0.1:50275]:[go-routine-184]echo: [5]: hi
+18:21:00.181212 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:21:00.176165 [round-1][go-routine-:5050-4] using conn.LocalAddress(127.0.0.1:50278)
+18:21:00.176256 [round-1][go-routine-:3030-3] using conn.LocalAddress(127.0.0.1:50277)
+18:21:00.176302 [round-1][go-routine-:3030-4] using conn.LocalAddress(127.0.0.1:50276)
+18:21:00.178272 [round-1][go-routine-:5050-8] using conn.LocalAddress(127.0.0.1:50279)
+18:21:00.178337 [round-1][go-routine-:4040-4] using conn.LocalAddress(127.0.0.1:50280)
+18:21:00.179992 [round-1][go-routine-:4040-2] using conn.LocalAddress(127.0.0.1:50281)
+18:21:01.182640 [round-1][response-from-server] for [go-routine-:4040-2][who-127.0.0.1:50281]:[go-routine-186]echo: [2]: hi
+18:21:01.182664 [round-1][response-from-server] for [go-routine-:3030-4][who-127.0.0.1:50276]:[go-routine-181]echo: [4]: hi
+18:21:01.182677 [round-1][response-from-server] for [go-routine-:5050-8][who-127.0.0.1:50279]:[go-routine-186]echo: [8]: hi
+18:21:01.182678 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:21:01.182729 [round-1][response-from-server] for [go-routine-:3030-3][who-127.0.0.1:50277]:[go-routine-182]echo: [3]: hi
+18:21:01.182736 [round-1][response-from-server] for [go-routine-:5050-4][who-127.0.0.1:50278]:[go-routine-185]echo: [4]: hi
+18:21:01.182700 [round-1][response-from-server] for [go-routine-:4040-4][who-127.0.0.1:50280]:[go-routine-185]echo: [4]: hi
+18:21:01.182942 [round-1] reached max-idle for this host(:3030), releasing conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:21:01.183064 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:21:01.183258 [round-1] reached max-idle for this host(:3030), releasing conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:21:01.183367 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:21:01.183430 [round-1] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:21:01.183548 [round-2] [go-routine-:3030-0] using conn (127.0.0.1:50261) from pool and releasing global IdleConns
+18:21:01.183569 [round-2][go-routine-:3030-0] using conn.LocalAddress(127.0.0.1:50261)
+18:21:01.183574 [round-2] [go-routine-:4040-3] using conn (127.0.0.1:50255) from pool and releasing global IdleConns
+18:21:01.183596 [round-2][go-routine-:4040-3] using conn.LocalAddress(127.0.0.1:50255)
+18:21:01.183614 [round-2] [go-routine-:5050-4] using conn (127.0.0.1:50264) from pool and releasing global IdleConns
+18:21:01.183626 [round-2][go-routine-:5050-4] using conn.LocalAddress(127.0.0.1:50264)
+18:21:01.183682 [round-2] [go-routine-:3030-1] using conn (127.0.0.1:50254) from pool and releasing global IdleConns
+18:21:01.183710 [round-2][go-routine-:3030-1] using conn.LocalAddress(127.0.0.1:50254)
+18:21:01.183756 [round-2] [go-routine-:3030-3] using conn (127.0.0.1:50260) from pool and releasing global IdleConns
+18:21:01.183774 [round-2][go-routine-:3030-3] using conn.LocalAddress(127.0.0.1:50260)
+18:21:01.184330 [round-2][go-routine-:3030-4] using conn.LocalAddress(127.0.0.1:50282)
+18:21:01.184606 [round-2][go-routine-:4040-0] using conn.LocalAddress(127.0.0.1:50283)
+18:21:01.184698 [round-2][go-routine-:4040-2] using conn.LocalAddress(127.0.0.1:50284)
+18:21:01.184776 [round-2][go-routine-:3030-2] using conn.LocalAddress(127.0.0.1:50286)
+18:21:01.184840 [round-2][go-routine-:4040-1] using conn.LocalAddress(127.0.0.1:50285)
+18:21:01.185580 [round-2][go-routine-:5050-0] using conn.LocalAddress(127.0.0.1:50289)
+18:21:01.185580 [round-2][go-routine-:4040-4] using conn.LocalAddress(127.0.0.1:50288)
+18:21:01.185648 [round-2][go-routine-:5050-1] using conn.LocalAddress(127.0.0.1:50287)
+18:21:01.185667 [round-2][go-routine-:5050-2] using conn.LocalAddress(127.0.0.1:50290)
+18:21:01.186082 [round-2][go-routine-:5050-3] using conn.LocalAddress(127.0.0.1:50291)
+18:21:02.183838 [round-2][response-from-server] for [go-routine-:3030-0][who-127.0.0.1:50261]:[go-routine-178]echo: [0]: hi
+18:21:02.183862 [round-2][response-from-server] for [go-routine-:3030-1][who-127.0.0.1:50254]:[go-routine-174]echo: [1]: hi
+18:21:02.183883 [round-2] returning conn :3030 to pool
+18:21:02.183825 [round-2][response-from-server] for [go-routine-:5050-4][who-127.0.0.1:50264]:[go-routine-178]echo: [4]: hi
+18:21:02.183922 [round-2][response-from-server] for [go-routine-:4040-3][who-127.0.0.1:50255]:[go-routine-178]echo: [3]: hi
+18:21:02.183935 [round-2] returning conn :3030 to pool
+18:21:02.183951 [round-2] returning conn :4040 to pool
+18:21:02.184003 [round-2] returning conn :5050 to pool
+18:21:02.184243 [round-2][response-from-server] for [go-routine-:3030-3][who-127.0.0.1:50260]:[go-routine-177]echo: [3]: hi
+18:21:02.184282 [round-2] returning conn :3030 to pool
+18:21:02.184563 [round-2][response-from-server] for [go-routine-:3030-4][who-127.0.0.1:50282]:[go-routine-183]echo: [4]: hi
+18:21:02.184591 [round-2] reached max-idle for this host(:3030), releasing conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:21:02.184717 [round-2][response-from-server] for [go-routine-:4040-0][who-127.0.0.1:50283]:[go-routine-187]echo: [0]: hi
+18:21:02.184733 [round-2] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:21:02.184799 [round-2][response-from-server] for [go-routine-:4040-2][who-127.0.0.1:50284]:[go-routine-188]echo: [2]: hi
+18:21:02.184813 [round-2] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:21:02.184910 [round-2][response-from-server] for [go-routine-:3030-2][who-127.0.0.1:50286]:[go-routine-184]echo: [2]: hi
+18:21:02.184934 [round-2] reached max-idle for this host(:3030), releasing conn to MaxConnsPerHost and closing conn: 127.0.0.1:3030
+18:21:02.185031 [round-2][response-from-server] for [go-routine-:4040-1][who-127.0.0.1:50285]:[go-routine-189]echo: [1]: hi
+18:21:02.185048 [round-2] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:21:02.185761 [round-2][response-from-server] for [go-routine-:4040-4][who-127.0.0.1:50288]:[go-routine-190]echo: [4]: hi
+18:21:02.185782 [round-2] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:4040
+18:21:02.185785 [round-2][response-from-server] for [go-routine-:5050-0][who-127.0.0.1:50289]:[go-routine-188]echo: [0]: hi
+18:21:02.185822 [round-2] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:21:02.185856 [round-2][response-from-server] for [go-routine-:5050-1][who-127.0.0.1:50287]:[go-routine-187]echo: [1]: hi
+18:21:02.185928 [round-2] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:21:02.185979 [round-2][response-from-server] for [go-routine-:5050-2][who-127.0.0.1:50290]:[go-routine-189]echo: [2]: hi
+18:21:02.185998 [round-2] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050
+18:21:02.186342 [round-2][response-from-server] for [go-routine-:5050-3][who-127.0.0.1:50291]:[go-routine-190]echo: [3]: hi
+18:21:02.186367 [round-2] [pool-global-idle-cap] releasing the conn to MaxConnsPerHost and closing conn: 127.0.0.1:5050

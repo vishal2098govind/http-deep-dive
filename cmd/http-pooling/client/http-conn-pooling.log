@@ -1,0 +1,147 @@
+go run client/main.go
+2026/05/10 21:43:20 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:43:20 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:43:20 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:43:20 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:43:20 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:43:20 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:43:20 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:43:20 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:43:20 GotConn: conn.LocalAddress([::1]:52621) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:43:20 GotConn: conn.LocalAddress([::1]:52622) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:43:20 GotConn: conn.LocalAddress([::1]:52624) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:43:20 GotConn: conn.LocalAddress([::1]:52623) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:43:20 GotConn: conn.LocalAddress([::1]:52627) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:43:20 GotConn: conn.LocalAddress([::1]:52628) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:43:20 GotConn: conn.LocalAddress([::1]:52626) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:43:20 GotConn: conn.LocalAddress([::1]:52625) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:43:20 response-from-server: {"echo":"hi"}
+2026/05/10 21:43:20 GotConn: conn.LocalAddress([::1]:52627) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:43:20 response-from-server: {"echo":"hi"}
+2026/05/10 21:43:20 response-from-server: {"echo":"hi"}
+2026/05/10 21:43:20 response-from-server: {"echo":"hi"}
+2026/05/10 21:43:20 GotConn: conn.LocalAddress([::1]:52628) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:43:20 response-from-server: {"echo":"hi"}
+2026/05/10 21:43:20 response-from-server: {"echo":"hi"}
+2026/05/10 21:43:20 response-from-server: {"echo":"hi"}
+2026/05/10 21:43:20 response-from-server: {"echo":"hi"}
+2026/05/10 21:43:20 response-from-server: {"echo":"hi"}
+2026/05/10 21:43:20 response-from-server: {"echo":"hi"}
+
+---
+sequential:
+go run client/main.go
+2026/05/10 21:44:34 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:44:34 GotConn: conn.LocalAddress([::1]:52648) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:44:34 response-from-server: {"echo":"hi"}
+2026/05/10 21:44:34 GotConn: conn.LocalAddress([::1]:52648) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:44:34 response-from-server: {"echo":"hi"}
+2026/05/10 21:44:34 GotConn: conn.LocalAddress([::1]:52648) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:44:34 response-from-server: {"echo":"hi"}
+2026/05/10 21:44:34 GotConn: conn.LocalAddress([::1]:52648) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:44:34 response-from-server: {"echo":"hi"}
+2026/05/10 21:44:34 GotConn: conn.LocalAddress([::1]:52648) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:44:34 response-from-server: {"echo":"hi"}
+2026/05/10 21:44:34 GotConn: conn.LocalAddress([::1]:52648) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:44:34 response-from-server: {"echo":"hi"}
+2026/05/10 21:44:34 GotConn: conn.LocalAddress([::1]:52648) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:44:34 response-from-server: {"echo":"hi"}
+2026/05/10 21:44:34 GotConn: conn.LocalAddress([::1]:52648) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:44:34 response-from-server: {"echo":"hi"}
+2026/05/10 21:44:34 GotConn: conn.LocalAddress([::1]:52648) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:44:34 response-from-server: {"echo":"hi"}
+2026/05/10 21:44:34 GotConn: conn.LocalAddress([::1]:52648) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:44:34 response-from-server: {"echo":"hi"}
+---
+Connection:close on server
+
+go run client/main.go
+2026/05/10 21:48:18 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:48:18 GotConn: conn.LocalAddress([::1]:52712) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:48:18 response-from-server: {"echo":"hi"}
+2026/05/10 21:48:18 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:48:18 GotConn: conn.LocalAddress([::1]:52713) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:48:18 response-from-server: {"echo":"hi"}
+2026/05/10 21:48:18 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:48:18 GotConn: conn.LocalAddress([::1]:52714) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:48:18 response-from-server: {"echo":"hi"}
+2026/05/10 21:48:18 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:48:18 GotConn: conn.LocalAddress([::1]:52715) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:48:18 response-from-server: {"echo":"hi"}
+2026/05/10 21:48:18 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:48:18 GotConn: conn.LocalAddress([::1]:52716) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:48:18 response-from-server: {"echo":"hi"}
+2026/05/10 21:48:18 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:48:18 GotConn: conn.LocalAddress([::1]:52717) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:48:18 response-from-server: {"echo":"hi"}
+2026/05/10 21:48:18 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:48:18 GotConn: conn.LocalAddress([::1]:52718) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:48:18 response-from-server: {"echo":"hi"}
+2026/05/10 21:48:18 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:48:18 GotConn: conn.LocalAddress([::1]:52719) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:48:18 response-from-server: {"echo":"hi"}
+2026/05/10 21:48:18 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:48:18 GotConn: conn.LocalAddress([::1]:52720) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:48:18 response-from-server: {"echo":"hi"}
+2026/05/10 21:48:18 ConnectStart: tcp:[::1]:4040
+2026/05/10 21:48:18 GotConn: conn.LocalAddress([::1]:52721) for conn.RemoteAddress([::1]:4040)
+2026/05/10 21:48:18 response-from-server: {"echo":"hi"}
+
+---
+HOL(Head of Line) blocking
+
+go run client/main.go
+
+2026/05/10 22:54:46 ConnectStart: tcp:[::1]:4040
+2026/05/10 22:54:46 GotConn: conn.LocalAddress([::1]:53594) for conn.RemoteAddress([::1]:4040)
+2026/05/10 22:54:46 response-from-server: {"echo":"fast"}
+2026/05/10 22:54:46 GotConn: conn.LocalAddress([::1]:53594) for conn.RemoteAddress([::1]:4040)
+2026/05/10 22:54:46 response-from-server: {"echo":"fast"}
+2026/05/10 22:54:46 GotConn: conn.LocalAddress([::1]:53594) for conn.RemoteAddress([::1]:4040)
+2026/05/10 22:54:46 response-from-server: {"echo":"fast"}
+2026/05/10 22:54:46 GotConn: conn.LocalAddress([::1]:53594) for conn.RemoteAddress([::1]:4040)
+2026/05/10 22:54:46 response-from-server: {"echo":"fast"}
+2026/05/10 22:54:46 GotConn: conn.LocalAddress([::1]:53594) for conn.RemoteAddress([::1]:4040)
+2026/05/10 22:54:51 response-from-server: {"echo":"slow"}
+2026/05/10 22:54:51 GotConn: conn.LocalAddress([::1]:53594) for conn.RemoteAddress([::1]:4040)
+2026/05/10 22:54:51 response-from-server: {"echo":"fast"}
+2026/05/10 22:54:51 GotConn: conn.LocalAddress([::1]:53594) for conn.RemoteAddress([::1]:4040)
+2026/05/10 22:54:51 response-from-server: {"echo":"fast"}
+2026/05/10 22:54:51 GotConn: conn.LocalAddress([::1]:53594) for conn.RemoteAddress([::1]:4040)
+2026/05/10 22:54:51 response-from-server: {"echo":"fast"}
+2026/05/10 22:54:51 GotConn: conn.LocalAddress([::1]:53594) for conn.RemoteAddress([::1]:4040)
+2026/05/10 22:54:51 response-from-server: {"echo":"fast"}
+2026/05/10 22:54:51 GotConn: conn.LocalAddress([::1]:53594) for conn.RemoteAddress([::1]:4040)
+2026/05/10 22:54:51 response-from-server: {"echo":"fast"}
+---
+with HTTP2-Multiplexing:
+
+go run client/main.go
+2026/05/10 23:46:32 ConnectStart: tcp:[::1]:4040
+2026/05/10 23:46:32 ConnectStart: tcp:[::1]:4040
+2026/05/10 23:46:32 ConnectStart: tcp:[::1]:4040
+2026/05/10 23:46:32 ConnectStart: tcp:[::1]:4040
+2026/05/10 23:46:32 ConnectStart: tcp:[::1]:4040
+2026/05/10 23:46:32 ConnectStart: tcp:[::1]:4040
+2026/05/10 23:46:32 ConnectStart: tcp:[::1]:4040
+2026/05/10 23:46:32 ConnectStart: tcp:[::1]:4040
+2026/05/10 23:46:32 GotConn: conn.LocalAddress([::1]:54470) for conn.RemoteAddress([::1]:4040)
+2026/05/10 23:46:32 GotConn: conn.LocalAddress([::1]:54469) for conn.RemoteAddress([::1]:4040)
+2026/05/10 23:46:32 GotConn: conn.LocalAddress([::1]:54471) for conn.RemoteAddress([::1]:4040)
+2026/05/10 23:46:32 GotConn: conn.LocalAddress([::1]:54476) for conn.RemoteAddress([::1]:4040)
+2026/05/10 23:46:32 GotConn: conn.LocalAddress([::1]:54475) for conn.RemoteAddress([::1]:4040)
+2026/05/10 23:46:32 GotConn: conn.LocalAddress([::1]:54473) for conn.RemoteAddress([::1]:4040)
+2026/05/10 23:46:32 GotConn: conn.LocalAddress([::1]:54474) for conn.RemoteAddress([::1]:4040)
+2026/05/10 23:46:32 GotConn: conn.LocalAddress([::1]:54472) for conn.RemoteAddress([::1]:4040)
+2026/05/10 23:46:32 [go-routine-7] response-from-server: {"echo":"fast"}
+2026/05/10 23:46:32 GotConn: conn.LocalAddress([::1]:54471) for conn.RemoteAddress([::1]:4040)
+2026/05/10 23:46:32 [go-routine-2] response-from-server: {"echo":"fast"}
+2026/05/10 23:46:32 GotConn: conn.LocalAddress([::1]:54476) for conn.RemoteAddress([::1]:4040)
+2026/05/10 23:46:32 [go-routine-1] response-from-server: {"echo":"fast"}
+2026/05/10 23:46:32 [go-routine-5] response-from-server: {"echo":"fast"}
+2026/05/10 23:46:32 [go-routine-0] response-from-server: {"echo":"fast"}
+2026/05/10 23:46:32 [go-routine-9] response-from-server: {"echo":"fast"}
+2026/05/10 23:46:32 [go-routine-3] response-from-server: {"echo":"fast"}
+2026/05/10 23:46:32 [go-routine-8] response-from-server: {"echo":"fast"}
+2026/05/10 23:46:32 [go-routine-6] response-from-server: {"echo":"fast"}
+2026/05/10 23:46:37 [go-routine-4] response-from-server: {"echo":"slow"}

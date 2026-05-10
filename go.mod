@@ -5,7 +5,10 @@ go 1.24.1
 require (
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/google/uuid v1.6.0
+	golang.org/x/net v0.0.0-20210428140749-89ef3d95e781
 )
+
+require golang.org/x/text v0.3.6 // indirect
 
 require (
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect

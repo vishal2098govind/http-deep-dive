@@ -1,0 +1,111 @@
+go run server/main.go
+[go-routine-0][127.0.0.1:55643]: connected
+[go-routine-1][127.0.0.1:55644]: connected
+[go-routine-2][127.0.0.1:55645]: connected
+[go-routine-3][127.0.0.1:55646]: connected
+[go-routine-4][127.0.0.1:55647]: connected
+[go-routine-2][127.0.0.1:55645]: [0]: hello, stay alive from
+[go-routine-3][127.0.0.1:55646]: [1]: hello, stay alive from
+[go-routine-4][127.0.0.1:55647]: [2]: hello, stay alive from
+[go-routine-2][127.0.0.1:55645]: [0]: hello, stay alive from
+[go-routine-3][127.0.0.1:55646]: [1]: hello, stay alive from
+[go-routine-4][127.0.0.1:55647]: [2]: hello, stay alive from
+[go-routine-0][127.0.0.1:55643]: [3]: hello, stay alive from
+[go-routine-0][127.0.0.1:55643]: disconnected
+[go-routine-1][127.0.0.1:55644]: [4]: hello, stay alive from
+[go-routine-1][127.0.0.1:55644]: disconnected
+[go-routine-4][127.0.0.1:55647]: disconnected
+[go-routine-2][127.0.0.1:55645]: disconnected
+[go-routine-3][127.0.0.1:55646]: disconnected
+
+---
+with idle-conn-timeout
+
+2026/05/10 00:31:59 [go-routine-0][127.0.0.1:57048]: connected
+2026/05/10 00:31:59 [go-routine-1][127.0.0.1:57049]: connected
+2026/05/10 00:31:59 [go-routine-2][127.0.0.1:57050]: connected
+2026/05/10 00:31:59 [go-routine-3][127.0.0.1:57051]: connected
+2026/05/10 00:31:59 [go-routine-4][127.0.0.1:57052]: connected
+2026/05/10 00:31:59 [go-routine-2][127.0.0.1:57050]: [0]: hello, stay alive from
+2026/05/10 00:31:59 [go-routine-3][127.0.0.1:57051]: [1]: hello, stay alive from
+2026/05/10 00:31:59 [go-routine-4][127.0.0.1:57052]: [2]: hello, stay alive from
+2026/05/10 00:31:59 [go-routine-2][127.0.0.1:57050]: [0]: hello, stay alive from
+2026/05/10 00:31:59 [go-routine-3][127.0.0.1:57051]: [1]: hello, stay alive from
+2026/05/10 00:31:59 [go-routine-4][127.0.0.1:57052]: [2]: hello, stay alive from
+2026/05/10 00:31:59 [go-routine-0][127.0.0.1:57048]: [3]: hello, stay alive from
+2026/05/10 00:31:59 [go-routine-0][127.0.0.1:57048]: disconnected
+2026/05/10 00:31:59 [go-routine-1][127.0.0.1:57049]: [4]: hello, stay alive from
+2026/05/10 00:31:59 [go-routine-1][127.0.0.1:57049]: disconnected
+2026/05/10 00:32:04 [go-routine-2][127.0.0.1:57050]: disconnected
+2026/05/10 00:32:04 [go-routine-4][127.0.0.1:57052]: disconnected
+2026/05/10 00:32:04 [go-routine-3][127.0.0.1:57051]: disconnected
+
+---
+
+with MaxConnsPerHost semaphore (with logging race condition):
+
+go run server/main.go
+2026/05/10 02:25:51 [go-routine-0][127.0.0.1:58940]: connected
+2026/05/10 02:25:51 [go-routine-0][127.0.0.1:58940]: [0]: hi
+2026/05/10 02:25:51 [go-routine-1][127.0.0.1:58939]: connected
+2026/05/10 02:25:51 [go-routine-5][127.0.0.1:58944]: connected
+2026/05/10 02:25:51 [go-routine-1][127.0.0.1:58939]: [1]: hi
+2026/05/10 02:25:51 [go-routine-3][127.0.0.1:58942]: connected
+2026/05/10 02:25:51 [go-routine-3][127.0.0.1:58942]: [5]: hi
+2026/05/10 02:25:51 [go-routine-5][127.0.0.1:58944]: [4]: hi
+2026/05/10 02:25:51 [go-routine-2][127.0.0.1:58941]: connected
+2026/05/10 02:25:51 [go-routine-4][127.0.0.1:58943]: connected
+2026/05/10 02:25:51 [go-routine-2][127.0.0.1:58941]: [9]: hi
+2026/05/10 02:25:51 [go-routine-4][127.0.0.1:58943]: [7]: hi
+2026/05/10 02:25:53 [go-routine-5][127.0.0.1:58944]: disconnected
+2026/05/10 02:25:53 [go-routine-1][127.0.0.1:58939]: disconnected
+2026/05/10 02:25:53 [go-routine-2][127.0.0.1:58941]: disconnected
+2026/05/10 02:25:53 [go-routine-6][127.0.0.1:58946]: connected
+2026/05/10 02:25:53 [go-routine-6][127.0.0.1:58946]: [8]: hi
+2026/05/10 02:25:53 [go-routine-8][127.0.0.1:58947]: connected
+2026/05/10 02:25:53 [go-routine-7][127.0.0.1:58945]: connected
+2026/05/10 02:25:53 [go-routine-8][127.0.0.1:58947]: [6]: hi
+2026/05/10 02:25:53 [go-routine-7][127.0.0.1:58945]: [2]: hi
+2026/05/10 02:25:55 [go-routine-7][127.0.0.1:58945]: disconnected
+2026/05/10 02:25:55 [go-routine-6][127.0.0.1:58946]: disconnected
+2026/05/10 02:25:55 [go-routine-8][127.0.0.1:58947]: disconnected
+2026/05/10 02:25:55 [go-routine-9][127.0.0.1:58948]: connected
+2026/05/10 02:25:55 [go-routine-9][127.0.0.1:58948]: [3]: hi
+2026/05/10 02:25:57 [go-routine-9][127.0.0.1:58948]: disconnected
+2026/05/10 02:25:57 [go-routine-0][127.0.0.1:58940]: disconnected
+2026/05/10 02:25:57 [go-routine-4][127.0.0.1:58943]: disconnected
+2026/05/10 02:25:57 [go-routine-3][127.0.0.1:58942]: disconnected
+---
+with MaxConnsPerHost semaphore (without logging race condition):
+
+go run server/main.go
+2026/05/10 02:26:36 [go-routine-0][127.0.0.1:58963]: connected
+2026/05/10 02:26:36 [go-routine-1][127.0.0.1:58966]: connected
+2026/05/10 02:26:36 [go-routine-5][127.0.0.1:58968]: connected
+2026/05/10 02:26:36 [go-routine-1][127.0.0.1:58966]: [2]: hi
+2026/05/10 02:26:36 [go-routine-0][127.0.0.1:58963]: [1]: hi
+2026/05/10 02:26:36 [go-routine-2][127.0.0.1:58967]: connected
+2026/05/10 02:26:36 [go-routine-3][127.0.0.1:58965]: connected
+2026/05/10 02:26:36 [go-routine-2][127.0.0.1:58967]: [5]: hi
+2026/05/10 02:26:36 [go-routine-4][127.0.0.1:58964]: connected
+2026/05/10 02:26:36 [go-routine-4][127.0.0.1:58964]: [3]: hi
+2026/05/10 02:26:36 [go-routine-5][127.0.0.1:58968]: [9]: hi
+2026/05/10 02:26:36 [go-routine-3][127.0.0.1:58965]: [0]: hi
+2026/05/10 02:26:38 [go-routine-0][127.0.0.1:58963]: disconnected
+2026/05/10 02:26:38 [go-routine-3][127.0.0.1:58965]: disconnected
+2026/05/10 02:26:38 [go-routine-4][127.0.0.1:58964]: disconnected
+2026/05/10 02:26:38 [go-routine-6][127.0.0.1:58971]: connected
+2026/05/10 02:26:38 [go-routine-6][127.0.0.1:58971]: [6]: hi
+2026/05/10 02:26:38 [go-routine-8][127.0.0.1:58970]: connected
+2026/05/10 02:26:38 [go-routine-7][127.0.0.1:58969]: connected
+2026/05/10 02:26:38 [go-routine-8][127.0.0.1:58970]: [8]: hi
+2026/05/10 02:26:38 [go-routine-7][127.0.0.1:58969]: [7]: hi
+2026/05/10 02:26:40 [go-routine-8][127.0.0.1:58970]: disconnected
+2026/05/10 02:26:40 [go-routine-7][127.0.0.1:58969]: disconnected
+2026/05/10 02:26:40 [go-routine-6][127.0.0.1:58971]: disconnected
+2026/05/10 02:26:40 [go-routine-9][127.0.0.1:58973]: connected
+2026/05/10 02:26:40 [go-routine-9][127.0.0.1:58973]: [4]: hi
+2026/05/10 02:26:42 [go-routine-9][127.0.0.1:58973]: disconnected
+2026/05/10 02:26:42 [go-routine-2][127.0.0.1:58967]: disconnected
+2026/05/10 02:26:42 [go-routine-1][127.0.0.1:58966]: disconnected
+2026/05/10 02:26:42 [go-routine-5][127.0.0.1:58968]: disconnected
